@@ -23,12 +23,12 @@ class InfoSystem
        $bConnection = new mysqli($this->srv, $this->usr ,  $this->pwd, $this->db);
 		if ($bConnection->connect_errno) 
 		{
-			echo 'NOK: (Error: '.$mysqli->connect_errno.') '.$mysqli->connect_error;
+			echo 'NOK: (Error: '.$bConnection->connect_errno.') '.$bConnection->connect_error;
 		
 		}
 		else
 		{
-			echo 'OK '.$mysqli->host_info.'\n';
+			echo 'OK '.$bConnection->host_info.'\n';
 			
 		}
         return $bConnection;
